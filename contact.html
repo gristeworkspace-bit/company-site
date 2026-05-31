@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#111827" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <title>お問い合わせ | 株式会社グリステ</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html">株式会社グリステ</a>
+      </div>
+      <nav class="site-nav">
+        <a href="index.html">トップ</a>
+        <a href="service.html">サービス</a>
+        <a href="contact.html">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>お問い合わせ</h1>
+        <p>以下のフォームはサンプルです。実際のメールアドレスはご自身でご記入ください。</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <div class="contact-card">
+          <h2>お問い合わせフォーム</h2>
+          <form>
+            <label for="name">お名前</label>
+            <input id="name" type="text" placeholder="例：山田 太郎" />
+
+            <label for="email">メールアドレス</label>
+            <input id="email" type="email" placeholder="your-email@example.com" />
+
+            <label for="message">お問い合わせ内容</label>
+            <textarea id="message" rows="6" placeholder="ご用件をご記入ください。"></textarea>
+
+            <button type="submit">送信</button>
+          </form>
+          <p class="note">※送信機能はこのテンプレートには含まれていません。バックエンド連携で動作を追加してください。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>株式会社グリステ</p>
+      <p>会社概要は後ほどご記入ください。</p>
+    </div>
+  </footer>
+</body>
+</html>
