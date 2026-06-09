@@ -245,6 +245,7 @@ body {
   border-right: 2px solid #cbd5e1;
   border-bottom: 2px solid #cbd5e1;
   clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  z-index: 0;
 }
 
 .triangle-node,
@@ -262,15 +263,40 @@ body {
   min-height: 88px;
   text-align: center;
   box-shadow: 0 18px 40px rgba(17, 24, 39, 0.08);
-  z-index: 1;
+  z-index: 2;
+}
+
+.node-idea {
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.node-meaning {
+  bottom: 10%;
+  right: 10%;
+}
+
+.node-decision {
+  bottom: 10%;
+  left: 10%;
+}
+
+.triangle-center {
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #f8fafc;
+  color: #111827;
 }
 
 .triangle-node::after {
   content: "";
   position: absolute;
   background: #94a3b8;
-  border-radius: 999px;
-  z-index: -1;
 }
 
 .triangle-node::before {
@@ -279,17 +305,12 @@ body {
   width: 0;
   height: 0;
   border-style: solid;
-  z-index: -1;
-}
-
-.triangle-center {
-  z-index: 2;
 }
 
 .node-idea::after {
   width: 2px;
-  height: 96px;
-  bottom: -92px;
+  height: 90px;
+  top: calc(100% - 2px);
   left: 50%;
   transform: translateX(-50%);
 }
@@ -297,42 +318,43 @@ body {
 .node-idea::before {
   border-width: 8px 6px 0 6px;
   border-color: #94a3b8 transparent transparent transparent;
-  bottom: -8px;
+  top: calc(100% - 2px);
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -100%);
+}
+
+.node-meaning::after,
+.node-decision::after {
+  width: 88px;
+  height: 2px;
+  top: 48%;
 }
 
 .node-meaning::after {
-  width: 2px;
-  height: 96px;
-  bottom: 0;
-  right: 42%;
+  right: calc(100% + 6px);
   transform: rotate(-35deg);
-  transform-origin: top right;
+  transform-origin: right center;
 }
 
 .node-meaning::before {
-  border-width: 8px 6px 0 6px;
-  border-color: #94a3b8 transparent transparent transparent;
-  bottom: 0;
-  right: 38%;
+  border-width: 6px 8px 6px 0;
+  border-color: transparent #94a3b8 transparent transparent;
+  top: 48%;
+  right: calc(100% + 4px);
   transform: translate(50%, -50%) rotate(-35deg);
 }
 
 .node-decision::after {
-  width: 2px;
-  height: 96px;
-  bottom: 0;
-  left: 42%;
+  left: calc(100% + 6px);
   transform: rotate(35deg);
-  transform-origin: top left;
+  transform-origin: left center;
 }
 
 .node-decision::before {
-  border-width: 8px 6px 0 6px;
-  border-color: #94a3b8 transparent transparent transparent;
-  bottom: 0;
-  left: 38%;
+  border-width: 6px 0 6px 8px;
+  border-color: transparent transparent transparent #94a3b8;
+  top: 48%;
+  left: calc(100% + 4px);
   transform: translate(-50%, -50%) rotate(35deg);
 }
 
@@ -369,24 +391,17 @@ body {
 
   .triangle-diagram {
     width: 100%;
-    max-width: 100%;
-    aspect-ratio: auto;
-    min-height: 360px;
+    aspect-ratio: 1 / 1;
   }
 
   .triangle-node {
-    position: relative;
-    width: calc(100% - 40px);
-    max-width: 320px;
-    margin: 0 auto 18px;
-    transform: none !important;
+    min-width: 120px;
+    min-height: 72px;
+    padding: 14px 18px;
   }
 
   .triangle-center {
-    position: relative;
-    inset: auto;
-    margin: 0 auto;
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
   }
 }
