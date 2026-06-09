@@ -262,33 +262,78 @@ body {
   min-height: 88px;
   text-align: center;
   box-shadow: 0 18px 40px rgba(17, 24, 39, 0.08);
+  z-index: 1;
 }
 
-.node-idea {
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -10%);
+.triangle-node::after {
+  content: "";
+  position: absolute;
+  background: #94a3b8;
+  border-radius: 999px;
+  z-index: -1;
 }
 
-.node-meaning {
-  bottom: 0;
-  right: 0;
-  transform: translate(10%, 10%);
-}
-
-.node-decision {
-  bottom: 0;
-  left: 0;
-  transform: translate(-10%, 10%);
+.triangle-node::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  z-index: -1;
 }
 
 .triangle-center {
-  inset: 32%;
-  background: #f8fafc;
-  color: #111827;
-  border-radius: 50%;
-  min-width: 140px;
-  min-height: 140px;
+  z-index: 2;
+}
+
+.node-idea::after {
+  width: 2px;
+  height: 96px;
+  bottom: -92px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.node-idea::before {
+  border-width: 8px 6px 0 6px;
+  border-color: #94a3b8 transparent transparent transparent;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.node-meaning::after {
+  width: 2px;
+  height: 96px;
+  bottom: 0;
+  right: 42%;
+  transform: rotate(-35deg);
+  transform-origin: top right;
+}
+
+.node-meaning::before {
+  border-width: 8px 6px 0 6px;
+  border-color: #94a3b8 transparent transparent transparent;
+  bottom: 0;
+  right: 38%;
+  transform: translate(50%, -50%) rotate(-35deg);
+}
+
+.node-decision::after {
+  width: 2px;
+  height: 96px;
+  bottom: 0;
+  left: 42%;
+  transform: rotate(35deg);
+  transform-origin: top left;
+}
+
+.node-decision::before {
+  border-width: 8px 6px 0 6px;
+  border-color: #94a3b8 transparent transparent transparent;
+  bottom: 0;
+  left: 38%;
+  transform: translate(-50%, -50%) rotate(35deg);
 }
 
 .triangle-caption {
@@ -322,7 +367,26 @@ body {
     flex-wrap: wrap;
   }
 
-  .flow-diagram {
-    flex-direction: column;
+  .triangle-diagram {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: auto;
+    min-height: 360px;
+  }
+
+  .triangle-node {
+    position: relative;
+    width: calc(100% - 40px);
+    max-width: 320px;
+    margin: 0 auto 18px;
+    transform: none !important;
+  }
+
+  .triangle-center {
+    position: relative;
+    inset: auto;
+    margin: 0 auto;
+    width: 140px;
+    height: 140px;
   }
 }
