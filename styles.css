@@ -316,46 +316,46 @@ body {
 }
 
 .node-idea::before {
-  border-width: 8px 6px 0 6px;
-  border-color: #94a3b8 transparent transparent transparent;
-  top: calc(100% - 2px);
+  border-width: 0 6px 8px 6px;
+  border-color: transparent transparent #94a3b8 transparent;
+  top: calc(100% + 2px);
   left: 50%;
-  transform: translate(-50%, -100%);
+  transform: translateX(-50%);
 }
 
 .node-meaning::after,
 .node-decision::after {
-  width: 88px;
+  width: 90px;
   height: 2px;
   top: 48%;
 }
 
 .node-meaning::after {
-  right: calc(100% + 6px);
+  left: -90px;
   transform: rotate(-35deg);
-  transform-origin: right center;
+  transform-origin: left center;
 }
 
 .node-meaning::before {
   border-width: 6px 8px 6px 0;
   border-color: transparent #94a3b8 transparent transparent;
   top: 48%;
-  right: calc(100% + 4px);
-  transform: translate(50%, -50%) rotate(-35deg);
+  left: -12px;
+  transform: translate(-50%, -50%) rotate(-35deg);
 }
 
 .node-decision::after {
-  left: calc(100% + 6px);
+  right: -90px;
   transform: rotate(35deg);
-  transform-origin: left center;
+  transform-origin: right center;
 }
 
 .node-decision::before {
   border-width: 6px 0 6px 8px;
   border-color: transparent transparent transparent #94a3b8;
   top: 48%;
-  left: calc(100% + 4px);
-  transform: translate(-50%, -50%) rotate(35deg);
+  right: -12px;
+  transform: translate(50%, -50%) rotate(35deg);
 }
 
 .triangle-caption {
