@@ -64,13 +64,29 @@
           <h2>実行コンセプト</h2>
           <p>グリステでは、<strong>アイデア</strong>、<strong>意味付け</strong>、<strong>意思決定</strong>をAIに入力し、価値ある成果物の消費を進める仕組みを図式化します。</p>
         </div>
-        <div class="triangle-diagram">
-          <div class="triangle-node node-idea">アイデア</div>
-          <div class="triangle-node node-meaning">意味付け</div>
-          <div class="triangle-node node-decision">意思決定</div>
-          <div class="triangle-center">AI</div>
+        <div class="triangle-svg">
+          <svg viewBox="0 0 340 310" role="img" aria-labelledby="concept-graphic-title">
+            <title id="concept-graphic-title">アイデア・意味付け・意思決定をAIに入力する三角図</title>
+            <defs>
+              <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+                <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8" />
+              </marker>
+            </defs>
+            <polygon points="170,20 320,290 20,290" fill="none" stroke="#cbd5e1" stroke-width="2" />
+            <rect x="110" y="20" width="120" height="52" rx="20" fill="#111827" />
+            <text x="170" y="54" fill="#ffffff" font-size="16" font-weight="700" text-anchor="middle" dominant-baseline="middle">アイデア</text>
+            <rect x="220" y="220" width="100" height="46" rx="20" fill="#111827" />
+            <text x="270" y="248" fill="#ffffff" font-size="16" font-weight="700" text-anchor="middle" dominant-baseline="middle">意味付け</text>
+            <rect x="20" y="220" width="100" height="46" rx="20" fill="#111827" />
+            <text x="70" y="248" fill="#ffffff" font-size="16" font-weight="700" text-anchor="middle" dominant-baseline="middle">意思決定</text>
+            <circle cx="170" cy="170" r="52" fill="#f8fafc" />
+            <text x="170" y="170" fill="#111827" font-size="20" font-weight="700" text-anchor="middle" dominant-baseline="middle">AI</text>
+            <path d="M170,72 L170,118" stroke="#94a3b8" stroke-width="3" marker-end="url(#arrowhead)" />
+            <path d="M250,242 L200,185" stroke="#94a3b8" stroke-width="3" marker-end="url(#arrowhead)" />
+            <path d="M90,242 L140,185" stroke="#94a3b8" stroke-width="3" marker-end="url(#arrowhead)" />
+          </svg>
         </div>
-        <p class="triangle-caption">AI が三角形の中心に入り、上のアイデアと下の意味付け・意思決定を結びます。</p>
+        <p class="triangle-caption">AI が三角形の中心に入り、上と下から入力を受け取るイメージです。</p>
       </div>
     </section>
 

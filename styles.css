@@ -230,132 +230,15 @@ body {
   color: #6b7280;
 }
 
-.triangle-diagram {
-  position: relative;
-  width: min(560px, 100%);
-  aspect-ratio: 1 / 1;
+.triangle-svg {
   margin: 32px auto 16px;
+  max-width: 560px;
 }
 
-.triangle-diagram::before {
-  content: "";
-  position: absolute;
-  inset: 12% 10%;
-  border-left: 2px solid #cbd5e1;
-  border-right: 2px solid #cbd5e1;
-  border-bottom: 2px solid #cbd5e1;
-  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-  z-index: 0;
-}
-
-.triangle-node,
-.triangle-center {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 18px 22px;
-  border-radius: 20px;
-  background: #111827;
-  color: #ffffff;
-  font-weight: 700;
-  min-width: 140px;
-  min-height: 88px;
-  text-align: center;
-  box-shadow: 0 18px 40px rgba(17, 24, 39, 0.08);
-  z-index: 2;
-}
-
-.node-idea {
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.node-meaning {
-  bottom: 10%;
-  right: 10%;
-}
-
-.node-decision {
-  bottom: 10%;
-  left: 10%;
-}
-
-.triangle-center {
-  top: 50%;
-  left: 50%;
-  width: 150px;
-  height: 150px;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: #f8fafc;
-  color: #111827;
-}
-
-.triangle-node::after {
-  content: "";
-  position: absolute;
-  background: #94a3b8;
-}
-
-.triangle-node::before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-}
-
-.node-idea::after {
-  width: 2px;
-  height: 90px;
-  top: calc(100% - 2px);
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.node-idea::before {
-  border-width: 0 6px 8px 6px;
-  border-color: transparent transparent #94a3b8 transparent;
-  top: calc(100% + 2px);
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.node-meaning::after,
-.node-decision::after {
-  width: 90px;
-  height: 2px;
-  top: 48%;
-}
-
-.node-meaning::after {
-  left: -90px;
-  transform: rotate(-35deg);
-  transform-origin: left center;
-}
-
-.node-meaning::before {
-  border-width: 6px 8px 6px 0;
-  border-color: transparent #94a3b8 transparent transparent;
-  top: 48%;
-  left: -12px;
-  transform: translate(-50%, -50%) rotate(-35deg);
-}
-
-.node-decision::after {
-  right: -90px;
-  transform: rotate(35deg);
-  transform-origin: right center;
-}
-
-.node-decision::before {
-  border-width: 6px 0 6px 8px;
-  border-color: transparent transparent transparent #94a3b8;
-  top: 48%;
-  right: -12px;
-  transform: translate(50%, -50%) rotate(35deg);
+.triangle-svg svg {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .triangle-caption {
@@ -387,21 +270,5 @@ body {
   .site-nav {
     gap: 14px;
     flex-wrap: wrap;
-  }
-
-  .triangle-diagram {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-  }
-
-  .triangle-node {
-    min-width: 120px;
-    min-height: 72px;
-    padding: 14px 18px;
-  }
-
-  .triangle-center {
-    width: 120px;
-    height: 120px;
   }
 }
